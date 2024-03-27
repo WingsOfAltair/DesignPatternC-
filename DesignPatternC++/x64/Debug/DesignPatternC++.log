@@ -1,0 +1,5 @@
+﻿  main.cpp
+C:\Users\basha\OneDrive\Desktop\Dev\DesignPatternC++\main.h(44,16): warning C4244: 'return': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+  DesignPatternC++.vcxproj -> C:\Users\basha\OneDrive\Desktop\Dev\DesignPatternC++\x64\Debug\DesignPatternC++.exe
