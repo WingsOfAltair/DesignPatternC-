@@ -17,19 +17,19 @@ private:
     float result = 0.0f;
 
 public:
-    void add(int value) {
+    void add(float value) {
         result += value;
     }
 
-    void subtract(int value) {
+    void subtract(float value) {
         result -= value;
     }
 
-    void multiply(int value) {
+    void multiply(float value) {
         result *= value;
     }
 
-    void divide(int value) {
+    void divide(float value) {
         if (value != 0)
             result /= value;
         else
@@ -40,7 +40,7 @@ public:
         result = 0;
     }
 
-    int getResult() const {
+    float getResult() const {
         return result;
     }
 };
@@ -49,10 +49,10 @@ public:
 class AddCommand : public Command {
 private:
     Calculator& calculator;
-    int value;
+    float value;
 
 public:
-    AddCommand(Calculator& calc, int val) : calculator(calc), value(val) {}
+    AddCommand(Calculator& calc, float val) : calculator(calc), value(val) {}
 
     void execute() override {
         calculator.add(value);
@@ -67,10 +67,10 @@ public:
 class SubtractCommand : public Command {
 private:
     Calculator& calculator;
-    int value;
+    float value;
 
 public:
-    SubtractCommand(Calculator& calc, int val) : calculator(calc), value(val) {}
+    SubtractCommand(Calculator& calc, float val) : calculator(calc), value(val) {}
 
     void execute() override {
         calculator.subtract(value);
@@ -85,11 +85,11 @@ public:
 class MultiplyCommand : public Command {
 private:
     Calculator& calculator;
-    int value;
-    int previousValue;
+    float value;
+    float previousValue;
 
 public:
-    MultiplyCommand(Calculator& calc, int val) : calculator(calc), value(val) {}
+    MultiplyCommand(Calculator& calc, float val) : calculator(calc), value(val) {}
 
     void execute() override {
         previousValue = calculator.getResult();
@@ -106,11 +106,11 @@ public:
 class DivideCommand : public Command {
 private:
     Calculator& calculator;
-    int value;
-    int previousValue;
+    float value;
+    float previousValue;
 
 public:
-    DivideCommand(Calculator& calc, int val) : calculator(calc), value(val) {}
+    DivideCommand(Calculator& calc, float val) : calculator(calc), value(val) {}
 
     void execute() override {
         previousValue = calculator.getResult();
@@ -127,7 +127,7 @@ public:
 class ClearCommand : public Command {
 private:
     Calculator& calculator;
-    int previousValue;
+    float previousValue;
 
 public:
     ClearCommand(Calculator& calc) : calculator(calc) {}

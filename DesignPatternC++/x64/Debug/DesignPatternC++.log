@@ -1,5 +1,9 @@
 ﻿  main.cpp
-C:\Users\basha\OneDrive\Desktop\Dev\DesignPatternC++\main.h(44,16): warning C4244: 'return': conversion from 'const float' to 'int', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\memory(3434,56): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'main.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\memory(3434,56):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\basha\OneDrive\Desktop\Dev\DesignPatternC++\main.h(185,51):
+  	see reference to function template instantiation 'std::unique_ptr<AddCommand,std::default_delete<AddCommand>> std::make_unique<AddCommand,Calculator&,double&,0>(Calculator &,double &)' being compiled
   
   DesignPatternC++.vcxproj -> C:\Users\basha\OneDrive\Desktop\Dev\DesignPatternC++\x64\Debug\DesignPatternC++.exe
